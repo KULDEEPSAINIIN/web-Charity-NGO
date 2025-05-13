@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charity NGO - Make a Difference</title>
+<meta name="description" content="Join us in creating lasting change through
+education,
+healthcare, and essential resources." />
+<meta name="author" content="Charity NGO" />
+<meta property="og:title" content="Charity NGO - Make a Difference" />
+<meta property="og:description" content="Join us in creating lasting change
+through
+education, healthcare, and essential resources." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://lovable.dev/opengraph-imagep98pqg.png"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@lovable_dev" />
+<meta name="twitter:image" content="https://lovable.dev/opengraphimagep98pqg.png" />
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+color: #333;
+}
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+/* Donate page */
+.donate-card {
+max-width: 768px;
+margin: 0 auto;
+background-color: white;
+border-radius: 8px;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+padding: 24px;
+}
+.donate-section {
+margin-bottom: 24px;
+}
+.donate-section h2 {
+font-size: 1.5rem;
+font-weight: 600;
+margin-bottom: 16px;
+}
+.amount-options {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 16px;
+}
+@media (min-width: 640px) {
+.amount-options {
+grid-template-columns: 1fr 1fr 1fr;
+}
+}
+.amount-btn {
+height: 64px;
+font-size: 1.125rem;
+background: none;
+border: 1px solid #e5e7eb;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s;
+}
+.amount-btn:hover {
+background-color: #f8f5ff;
+border-color: #d1c4e9;
+}
+.amount-btn.selected {
+background-color: #f3e8ff;
+border-color: #c4b5fd;
+}
+.custom-amount {
+margin-top: 16px;
+}
+.custom-amount label {
+display: block;
+margin-bottom: 4px;
+font-weight: 500;
+}
+.amount-input-wrapper {
+position: relative;
+}
+.amount-input-wrapper span {
+position: absolute;
+left: 12px;
+top: 10px;
+color: #666;
+}
+.amount-input {
+width: 100%;
+padding: 8px 12px 8px 28px;
+border: 1px solid #e5e7eb;
+border-radius: 6px;
+}
+.donation-type {
+display: grid;
+grid-template-columns: 1fr;
+gap: 16px;
+}
+@media (min-width: 640px) {
+.donation-type {
+grid-template-columns: 1fr 1fr;
+}
+}
+.donation-type-btn {
+height: 48px;
+background: none;
+border: 1px solid #e5e7eb;
+border-radius: 6px;
+cursor: pointer;
+transition: all 0.3s;
+}
+.donation-type-btn:hover {
+background-color: #f8f5ff;
+border-color: #d1c4e9;
+}
+.donation-type-btn.selected {
+background-color: #f3e8ff;
+border-color: #c4b5fd;
+}
+.personal-info {
+display: grid;
+grid-template-columns: 1fr;
+gap: 16px;
+}
+@media (min-width: 640px) {
+.personal-info {
+grid-template-columns: 1fr 1fr;
+}
+}
+.form-group {
+margin-bottom: 16px;
+}
+.form-group label {
+display: block;
+margin-bottom: 4px;
+font-weight: 500;
+}
+.form-input {
+width: 100%;
+padding: 8px 12px;
+border: 1px solid #e5e7eb;
+border-radius: 6px;
+}
+.email-group {
+grid-column: 1 / -1;
+}
+.complete-btn {
+width: 100%;
+background-color: #9333ea;
+color: white;
+font-size: 1.125rem;
+font-weight: 500;
+padding: 24px 0;
+border: none;
+border-radius: 6px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+.complete-btn:hover {
+background-color: #7e22ce;
+}
+/* About page */
+.page-content {
+padding: 48px 0;
+}
+.page-title {
+font-size: 2.25rem;
+font-weight: 700;
+text-align: center;
+margin-bottom: 32px;
+}
+.page-text {
+max-width: 768px;
+margin: 0 auto;
+}
+.page-text p {
+font-size: 1.125rem;
+margin-bottom: 24px;
+}
+.page-text h2 {
+font-size: 1.5rem;
+font-weight: 600;
+margin-top: 32px;
+margin-bottom: 16px;
+}
+</style>
+</head>
+<body>
+<!-- Donate Page -->
+<div id="donate-page" class="page">
+<div class="page-content">
+<div class="container">
+<h1 class="page-title">Make a Donation</h1>
+<p class="text-lg text-center max-w-3xl mx-auto mb-8">
+Your generosity helps us provide education, healthcare, and essential resources
+to
+those in need.
+Choose an amount below or enter a custom donation.
+</p>
+<form action="donateform.php" method="POST">
+<div class="donate-card">
+<div class="donate-section">
+<h2>Payment Information</h2>
+<div class="amount-options">
+<!--<button class="amount-btn" data-amount="25">$25</button>
+<button class="amount-btn" data-amount="50">$50</button>
+<button class="amount-btn" data-amount="100">$100</button>
+<button class="amount-btn" data-amount="250">$250</button>
+<button class="amount-btn" data-amount="500">$500</button>
+<button class="amount-btn" data-amount="1000">$1,000</button> -->
+</div>
+<div class="custom-amount">
+<label for="customAmount">Custom Amount</label>
+<div class="amount-input-wrapper">
+<!--<span>Rs.</span>-->
+<input id="customAmount" type="number" name="amount" min="1" placeholder="Enter Amount (INR)"
+class="amount-input" required>
+</div>
+</div>
+<br>
+<div class="form-group email-group">
+<!--<label for="email">Payment Method</label>-->
+<select required id="email" class="form-input">
+<option value="">Select Payment Method</option>
+<option value="upi">UPI</option>
+<option value="card">Credit/Debit Card</option>
+</select>
+</div>
+</div>
+<!--
+<div class="donate-section">
+<h2>Donation Type</h2>
+<div class="donation-type">
+<button class="donation-type-btn selected" data-type="one-time">One-time
+Donation</button>
+<button class="donation-type-btn" data-type="monthly">Monthly
+Donation</button>
+</div>
+</div>
+-->
+<div class="donate-section">
+<h2>Personal Information</h2>
+<div class="personal-info">
+<div class="form-group">
+<label for="firstName">First Name</label>
+<input id="firstName" type="text" name="first_name" placeholder="First name" class="form-input" required>
+</div>
+<div class="form-group">
+<label for="lastName">Last Name</label>
+<input id="lastName" type="text" name="last_name" placeholder="Last name" class="form-input" required>
+</div>
+<div class="form-group email-group">
+<label for="email">Email</label>
+<input id="email" type="email" name="email" placeholder="Your email address"
+class="form-input" required>
+</div>
+</div>
+</div>
+<button id="complete-donation" class="complete-btn">Complete Donation</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</body>
+</html>
